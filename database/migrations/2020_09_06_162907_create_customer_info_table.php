@@ -15,8 +15,8 @@ class CreateCustomerInfoTable extends Migration
     {
         Schema::create('CustomerInfo', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('customerName', 100);
-            $table->text('customerAddress', 100);
+            $table->string('customerName', 200);
+            $table->text('customerAddress');
             $table->enum('customerType', ['Regular', 'Frequent']);
             $table->dateTime('creationDate', 0);
             $table->timestamps();
