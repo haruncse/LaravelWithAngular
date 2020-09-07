@@ -33,9 +33,19 @@ class CustomerInfoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //
+         
+        $inputData=$request->all();
+        //return $inputData['customerName'];
+        $customerData=new CustomerInfo;
+        $customerData->customerName=$inputData['customerName'];
+        $customerData->customerAddress=$inputData['customerAddress'];
+        $customerData->customerType=$inputData['customerType'];
+        $customerData->save();
+        
+        return $customerData;
     }
 
     /**
@@ -44,6 +54,8 @@ class CustomerInfoController extends Controller
      * @param  \App\Model\CustomerInfo  $customerInfo
      * @return \Illuminate\Http\Response
      */
+
+
     public function show(CustomerInfo $customerInfo)
     {
         //

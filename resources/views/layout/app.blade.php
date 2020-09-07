@@ -7,8 +7,10 @@
 </head>
 
 	<body>
-		<h1>This is angular Page</h1>
+		<h1>Data Save and Retrive using Angular</h1>
+
 		@yield('homeContent')
+		
 	</body>
 
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +12,10 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+	return view('CustomerInfo.customerInfo');
+    //return view('welcome');
 });
 
 Route::get('/home', function () {
@@ -28,3 +31,4 @@ Route::post('/post-basic-data/{id}',function($id){
 });
 
 Route::resource('/post-basic-data2','AngularDataSaveController');
+Route::resource('/customer-info','CustomerInfoController');

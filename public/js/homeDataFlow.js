@@ -5,12 +5,17 @@
 
 	appName.controller("controllerName",['$scope','$http',function ($scope,$http){
 		$scope.allDataItem=[];
+
 		console.log("Home Data Flow Inside Controller ");
+
 		$http.get('/get-basic-data').success(function(data){
 			console.log(data);
 			$scope.allDataItem=data;
 		});
+
 		var dataItem=this;
+		var customerInfo=this;
+
 		$scope.formData = {};
 		$scope.addDataItem=function () {
 			//console.log("Data");
@@ -33,6 +38,16 @@
 		        //alert(result);
 		        console.log(result);
 		    })
+		};
+
+		$scope.saveCustomerInfo=function(){
+			$http({
+				method:"POST",
+				url:'/customer-info',
+				data:this.customerInfo
+			}).success(function(result){
+				console.log(result);
+			})/*.error()*/
 		};
 
 	}]);
