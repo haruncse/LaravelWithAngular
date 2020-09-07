@@ -14,7 +14,7 @@
 		});
 
 		var dataItem=this;
-		var customerInfo=this;
+		
 
 		$scope.formData = {};
 		$scope.addDataItem=function () {
@@ -40,6 +40,9 @@
 		    })
 		};
 
+		var customerInfo=this;
+		$scope.customerData=[];
+
 		$scope.saveCustomerInfo=function(){
 			$http({
 				method:"POST",
@@ -47,8 +50,21 @@
 				data:this.customerInfo
 			}).success(function(result){
 				console.log(result);
+				$http.get('/customer-info').success(function(data){
+					console.log(data);
+					$scope.customerData=data;
+					customerInfo.customerName="";
+					customerInfo.customerAddress="";
+					customerInfo.customerType="";
+				});
+
 			})/*.error()*/
 		};
+
+		$http.get('/customer-info').success(function(data){
+			console.log(data);
+			$scope.customerData=data;
+		});
 
 	}]);
 

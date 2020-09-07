@@ -14,7 +14,7 @@ class CustomerInfoController extends Controller
      */
     public function index()
     {
-        //
+        return CustomerInfo::all();
     }
 
     /**
@@ -44,7 +44,7 @@ class CustomerInfoController extends Controller
         $customerData->customerAddress=$inputData['customerAddress'];
         $customerData->customerType=$inputData['customerType'];
         $customerData->save();
-        
+
         return $customerData;
     }
 
