@@ -1,5 +1,6 @@
 @extends('layout.app')
 @section('homeContent')
+<script type="text/javascript" src="/js/homeDataFlow.js"></script>
 <style type="text/css">
 	.divShow{
 		text-align: left;

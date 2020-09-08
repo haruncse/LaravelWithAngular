@@ -78,8 +78,8 @@
 
                 <div class="links">
                     <a href="/data-save-retrive-by-angular">Data Save and Retrive Using Angular</a>
-                    {{--<a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
+                    <a href="/data-search-by-suggestion">Search Item With Suggestion</a>
+                    {{--<a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>--}}
                 </div>

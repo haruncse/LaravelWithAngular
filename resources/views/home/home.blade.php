@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('homeContent')
-
+<script type="text/javascript" src="/js/homeDataFlow.js"></script>
 <div>
 	This is Home Content
 </div>

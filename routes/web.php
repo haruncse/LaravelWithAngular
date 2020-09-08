@@ -20,6 +20,12 @@ Route::get('/', function () {
 Route::get('/data-save-retrive-by-angular',function(){
 	return view('CustomerInfo.customerInfo');
 });
+
+Route::get('/data-search-by-suggestion',function(){
+	return view('CustomerInfoSearch.customerInfoSearch');
+});
+
+
 Route::get('/home', function () {
     return view('home.home');
 });
