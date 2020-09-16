@@ -21,6 +21,10 @@ Route::get('/data-save-retrive-by-angular',function(){
 	return view('CustomerInfo.customerInfo');
 });
 
+Route::get('/customer-info-view-by-design',function(){
+	return view('CustomerInfo.customerServiceInfo');
+});
+
 Route::get('/data-search-by-suggestion',function(){
 	return view('CustomerInfoSearch.customerInfoSearch');
 });
