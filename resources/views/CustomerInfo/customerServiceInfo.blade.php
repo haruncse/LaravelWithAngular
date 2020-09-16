@@ -12,14 +12,15 @@
 
 <script type="text/javascript">
 
-    var displayField=["manageAccount","personalInfo","Orders"];
-    $(document).ready(function() {
+    //var displayField=["manageAccount","personalInfo","Orders"];
+    var displayField=["personalInfo","Orders"];
+    /*$(document).ready(function() {
         //$("#manageAccount").css("display","none");
         //$("#personalInfo").css("display","none");
         for(var i in displayField){
             $("#"+displayField[i]).css("display","none");
         }
-    });
+    });*/
     //var displayField=["manageAccount","personalInfo","Orders"];
     function displayInfo(itemId){
         $("#"+itemId).css("display","block");
@@ -63,8 +64,6 @@
 
 </script>
 
-
-<link href="{{ asset('/css/account.css') }}" rel="stylesheet">
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
 <style type="text/css">
