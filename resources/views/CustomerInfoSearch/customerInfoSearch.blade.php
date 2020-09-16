@@ -32,7 +32,7 @@
 				<div >
 					<input type="text" name="customerInfo" id="customerInfo" ng-model="customerSearchInfo" ng-keyup="searchCustomer(customerSearchInfo)" class="form-control" />
 					<ul class="list-group">
-						<li class="list-group-item" ng-repeat="customerData in filterCoustomer" ng-click="fillTextBox(customerData)">@{{customerData}}</li>
+						<li class="list-group-item" ng-repeat="customerData in filterCoustomer track by $index" ng-click="fillTextBox(customerData)">@{{customerData}}</li>
 					</ul>
 				</div>
 			</div>
