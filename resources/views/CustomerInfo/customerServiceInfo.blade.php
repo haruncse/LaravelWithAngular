@@ -4,7 +4,7 @@
 
 <script type="text/javascript">
 
-    var displayField=["manageAccount","personalInfo","Orders"];
+    var displayField=["manageAccount","personalInfo","Orders","ReOrders"];
     //var displayField=["personalInfo","Orders"];
     $(document).ready(function() {
         //$("#manageAccount").css("display","none");
@@ -100,7 +100,7 @@
 			            {{--<label class="col-lg-12" onclick="displayInfo('manageAccount');"><a>Manage Account</a></label>--}}
 			            <label class="col-lg-12" onclick="displayInfo('personalInfo');"><a>Personal Information</a></label>
 			            <label class="col-lg-12" onclick="displayInfo('Orders');"><a>Orders</a></label>
-			            <label class="col-lg-12" onclick="displayInfo('Orders');"><a>Re-Order</a></label>
+			            <label class="col-lg-12" onclick="displayInfo('ReOrders');"><a>Re-Order</a></label>
 			            <label class="col-lg-12"><a  href="http://lovelypetbd/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a></label>
 			        </div>
 			        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8 ">
@@ -178,7 +178,7 @@
 
 			            <div id="Orders" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			                <div class="panel panel-default">
-			                    <div class="panel-heading"><label> All Order List</label></div>
+			                    <div class="panel-heading"><label > All Order List</label></div>
 
 			                    <div class="panel-body">
 			                      @if(Session::has('message'))
@@ -191,6 +191,29 @@
 			                                
 			                                <div class="col-md-10">
 			                                    <label>All order List</label>
+			                                </div>
+
+			                            </div>
+			                        </form>
+			                    </div>
+			                </div>
+			            </div>
+
+			            <div id="ReOrders" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			                <div class="panel panel-default">
+			                    <div class="panel-heading"><label > Re Order</label></div>
+
+			                    <div class="panel-body">
+			                      @if(Session::has('message'))
+			                      <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+			                      @endif
+			                        <form class="form-horizontal" method="POST" action="/">
+			                            {{ csrf_field() }}
+
+			                            <div class="form-group">
+			                                
+			                                <div class="col-md-10">
+			                                    <label>Re order List</label>
 			                                </div>
 
 			                            </div>
