@@ -27,7 +27,7 @@
 	<div class="row">
 		<div class="container col-md-6">
 			<div class="col-md-4" ng-app="customerInfoSearchApp" ng-controller="customerInfoSearchController">
-				<h3 align="center">AngularJS Autocomplete Textbox</h3>
+				<h3 >AngularJS Autocomplete Textbox</h3>
 				<label>Customer Info Search: Enter Customer Info </label>
 				<div >
 					<input type="text" name="customerInfo" id="customerInfo" ng-model="customerSearchInfo" ng-keyup="searchCustomer(customerSearchInfo)" class="form-control" />
