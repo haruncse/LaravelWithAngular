@@ -181,20 +181,9 @@
 			                    <div class="panel-heading"><label > All Order List</label></div>
 
 			                    <div class="panel-body">
-			                      @if(Session::has('message'))
-			                      <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
-			                      @endif
-			                        <form class="form-horizontal" method="POST" action="/">
-			                            {{ csrf_field() }}
-
-			                            <div class="form-group">
-			                                
-			                                <div class="col-md-10">
-			                                    <label>All order List</label>
-			                                </div>
-
-			                            </div>
-			                        </form>
+			                    <table class="table-responsive">
+			                    	All Oreder Will Goes here by angular
+			                    </table>
 			                    </div>
 			                </div>
 			            </div>
